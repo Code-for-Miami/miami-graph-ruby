@@ -9,6 +9,7 @@
 
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <link rel="stylesheet" type="text/css"  href="//fonts.googleapis.com/css?family=Open+Sans:400,600">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/css/materialize.min.css"> -->
 
   <script type="text/javascript" src="//d3js.org/d3.v3.min.js"></script>
@@ -19,8 +20,67 @@
 
 </head>
 <body id="top" class="scrollspy">
+  <!-- Pre Loader -->
+  <div id="loader-wrapper">
+      <div id="loader"></div>
 
-<%= yield %>
+      <div class="loader-section section-left"></div>
+      <div class="loader-section section-right"></div>
+
+  </div>
+
+  <!--Navigation-->
+   <div class="navbar-fixed">
+      <nav id="nav_f" class="default_color" role="navigation">
+          <div class="container">
+              <div class="nav-wrapper"><%= link_to "Miami Graph", root_path, id: "logo-container", class: "brand-logo" %>
+              <ul id="nav-mobile" class="right side-nav">
+                <li><%= link_to "About", about_path %></li>
+                <li><a href="http://blog.miamigraph.com/">Blog</a></li>
+              </ul><a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+              </div>
+          </div>
+      </nav>
+  </div>
+
+
+  <%= yield %>
+
+  <!--Footer-->
+  <footer id="engage" class="page-footer default_color scrollspy">
+      <div class="container">
+          <div class="row center">
+              <div class="col s12 white-text">
+                  <h2 class="white-text">Let's connect</h2>
+  		  <div class="section col s12">
+  		  <p class="flow-text">
+  		    Join us every Monday at 7pm at <a class="white-text" style="text-decoration:underline" href="http://thelabmiami.com/">The Lab Miami</a>
+  		  </p>
+  		  </div>
+  		  <div class="col s4 m2 offset-m3">
+                      <a class="white-text" href="https://www.facebook.com/CodeForMiami?fref=ts">
+                        <i class="large fa fa-facebook-square white-text"></i>
+                      </a>
+                    </div>
+  		  <div class="col s4 m2">
+                      <a class="white-text" href="https://twitter.com/CodeForMiami">
+                        <i class="large fa fa-twitter-square white-text"></i>
+                      </a>
+                    </div>
+  		  <div class="col s4 m2">
+                      <a class="white-text" href="https://github.com/Code-for-Miami/miami-budget">
+                        <i class="large fa fa-github-square white-text"></i>
+                      </a>
+                    </div>
+              </div>
+          </div>
+      </div>
+      <div class="footer-copyright default_color">
+          <div class="container">
+              A <a class="white-text" href="http://codeformiami.org">Code for Miami</a> project.
+          </div>
+      </div>
+  </footer>
 
   <script type="text/javascript" src="/sequences.js"></script>
 </body>
