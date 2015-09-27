@@ -25,6 +25,8 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'better_errors', '~> 2.1.1'
+gem 'haml'
+gem "haml-rails", "~> 0.9"
 
 
 # Use ActiveModel has_secure_password
