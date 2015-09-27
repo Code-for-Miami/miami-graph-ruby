@@ -2,3 +2,12 @@
   .container
     %h1.text_h.center.header.cd-headline.letters.type
       %span Participate in our polls right now!
+
+- @polls.each do |poll|
+  .well
+    %h2= poll.topic
+    .btn-group
+      = link_to 'Edit', edit_poll_path(poll), class: 'btn-default'
+      = link_to 'Delete', poll_path(poll),                        |
+        method: :delete,                                          |
+        class: 'danger', data: {confirm: 'Are you sure?'} |
