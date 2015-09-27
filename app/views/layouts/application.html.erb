@@ -13,7 +13,7 @@
   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/css/materialize.min.css"> -->
 
   <script type="text/javascript" src="//d3js.org/d3.v3.min.js"></script>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => false %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <script src="//cdnjs.cloudflare.com/ajax/libs/numeral.js/1.4.5/numeral.min.js"></script>
   <!-- <script type="text/javascript" src="//code.jquery.com/jquery-2.1.4.min.js"></script> -->
   <%= csrf_meta_tags %>
@@ -39,6 +39,7 @@
                 <li><%= link_to "About", about_path %></li>
                 <li><a href="http://blog.miamigraph.com/">Blog</a></li>
                 <li><%= link_to "Polls", polls_path %></li>
+                <li><%= link_to 'Add poll', new_poll_path %></li>
               </ul><a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
               </div>
           </div>

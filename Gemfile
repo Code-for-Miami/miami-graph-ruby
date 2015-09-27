@@ -27,7 +27,11 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'better_errors', '~> 2.1.1'
 gem 'haml'
 gem "haml-rails", "~> 0.9"
+gem "simple_form", "~> 3.1.0"
 
+
+gem 'jquery-turbolinks'
+gem "cocoon"
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
