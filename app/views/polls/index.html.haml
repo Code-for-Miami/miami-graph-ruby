@@ -6,6 +6,12 @@
 - @polls.each do |poll|
   .well
     %h2= poll.topic
+    %p
+      - if current_user
+        = link_to 'Participate!', poll_path(poll), class: 'btn btn-primary btn-lg block'
+      - else
+        Please sign in via #{link_to 'Facebook', '/auth/facebook'} to participate in this poll.
+
     .btn-group
       = link_to 'Edit', edit_poll_path(poll), class: 'btn-default'
       = link_to 'Delete', poll_path(poll),                        |
