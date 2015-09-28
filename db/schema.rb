@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150928022239) do
+ActiveRecord::Schema.define(version: 20150928224138) do
 
   create_table "polls", force: :cascade do |t|
     t.text     "topic"
@@ -32,8 +32,9 @@ ActiveRecord::Schema.define(version: 20150928022239) do
   create_table "vote_options", force: :cascade do |t|
     t.string   "title"
     t.integer  "poll_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
+    t.integer  "votes_counter", default: 0, null: false
   end
 
   add_index "vote_options", ["poll_id"], name: "index_vote_options_on_poll_id"

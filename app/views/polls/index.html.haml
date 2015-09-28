@@ -5,7 +5,10 @@
 
 - @polls.each do |poll|
   .well
-    %h2= poll.topic
+    %h2
+      = poll.topic
+      %small
+        (voted: #{poll.votes_summary})
     %p
       - if current_user
         = link_to 'Participate!', poll_path(poll), class: 'btn btn-primary btn-lg block'
