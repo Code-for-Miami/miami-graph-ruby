@@ -4,7 +4,8 @@ class VotesController < ApplicationController
       @poll = Poll.find_by_id(params[:poll][:id])
       @option = @poll.vote_options.find_by_id(params[:vote_option][:id])
       if @option && @poll && !current_user.voted_for?(@poll)
-        @option.votes.create({user.id: current_user.id })
+        byebug
+        @option.votes.create({ @user.id => current_user.id })
       else
         render js: 'alert(\'Your vote cannot be saved. Have you already voted?\');'
       end

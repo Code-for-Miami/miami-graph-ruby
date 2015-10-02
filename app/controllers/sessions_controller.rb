@@ -1,8 +1,8 @@
 class SessionsController < ApplicationController
   def create
-    user = User.from_omniauth(request.env['omniauth.auth'])
-    cookies[:user_id] = user.id
-    flash[:sucess] = "Welcome, #{user.name}!"
+    @user = User.from_omniauth(request.env['omniauth.auth'])
+    cookies[:user_id] = @user.id
+    flash[:sucess] = "Welcome, #{@user.name}!"
     redirect_to root_url
   end
 
